@@ -1,0 +1,111 @@
+<!--<md-toolbar color="primary">
+  <span routerLink='BookParking'>Book Parking</span>
+
+  <md-toolbar-row>
+    <span routerLink='ViewBooking'>View Booking</span>
+    <span class="example-spacer"></span>
+  </md-toolbar-row>
+
+  <md-toolbar-row>
+    <span routerLink='FeedBack'>FeedBack</span>
+    <span class="example-spacer"></span>
+  </md-toolbar-row>
+</md-toolbar>-->
+
+<!--<a class='btn' *ngIf="(user | async)"  md-raised-button routerLink="SignIn" (click)='logout()'>Logout</a>
+<h2> hello {{(user| async)?.email}}</h2>-->
+<!--<h2>Select Location For Booking</h2>
+<div routerLink='/Bahadurabad'>
+<h1><b>Bahadurabad</b></h1>
+<!--<img src="https://dawnadvertiser.files.wordpress.com/2013/07/big-a.jpg">-->
+<!--</div>
+<div routerLink="/Millenium">
+<h1><b>Millenium mall</b></h1>
+<!--<img src="http://bolee.com/resources/items/img/2012/12/27/thmb/11965986791387732962.jpg">-->
+<!--</div>
+<div routerLink="/Imtiaz">
+<h1><b>Imtiaz Super Market</b></h1>
+<!--<img src="http://i.dawn.com/large/2016/06/575a96759de30.jpg">-->
+<!--</div>-->
+
+<md-card class="mdSlot" *ngIf='enableBook' >
+  <md-card-title>{{locat}}</md-card-title>
+  <md-card-subtitle>Slots: {{slots}} </md-card-subtitle>
+  <form [formGroup]="bookTime" (ngSubmit)="onSubmit(bookTime.value)"> 
+  <md-card-content>
+       
+<md-input-container>
+  <input mdInput  [mdDatepicker]="picker" [(ngModel)]="date" placeholder="Choose a date" formControlName="Dates">
+  <button mdSuffix [mdDatepickerToggle]="picker"></button>
+</md-input-container>
+<md-datepicker #picker></md-datepicker>
+
+
+ <md-select placeholder="Select Time"  name="Time" formControlName="Time">
+    <md-option *ngFor="let T of Time" [value]="T">
+      {{T}}:00
+    </md-option>
+  </md-select>
+
+  <md-select placeholder="Select Hours" name="Hours" formControlName="Hours">
+    <md-option *ngFor="let H of Hours" [value]="H">
+      {{H}} hours
+    </md-option>
+  </md-select>
+ 
+  </md-card-content>
+  <md-card-actions>
+    <div >
+      <div class="button-row">
+    <button class="sbtn" md-raised-button [disabled]='!bookTime.valid' >Submit</button>
+    <button class="sbtn" md-raised-button (click)='backToLocat()'>Back</button>
+      </div>
+    <div *ngIf='showTable'>
+      <h3>Reserved Slots:</h3>
+      <table >
+      <tr id="restd" *ngFor='let resSlot of this.BS.resSlots'><td>Slots: {{resSlot}}</td></tr>
+    </table>
+      <h3>Available Slots:</h3>   
+   <table >
+      <tr *ngFor='let slot of this.BS.actualSlots'  ><td (click)='toBookSlots(slot)'>Slots: {{slot}}</td></tr>
+    </table>
+    </div>
+  </div>      
+     
+
+  </md-card-actions>
+   </form>
+    <!--<button md-raised-button (click)='toCheckBook()' >toCheckBook</button>-->
+</md-card >
+<!--<md-card *ngIf='check'>
+<md-card-title>{{locat}}</md-card-title>
+  <md-card-subtitle>Slots: {{slots}} </md-card-subtitle>
+  <md-card-content>
+    <table>
+      <tr *ngFor='let slot of slotsArray' (click)='toCheckTrue(slot)'>Slots: {{slot}}</tr>
+    </table>
+    
+  </md-card-content>
+   <md-card-actions>
+  <button md-raised-button (click)='toCheck()'>Cancel</button>
+  </md-card-actions>
+
+</md-card>-->
+
+
+<div *ngIf='!check'>
+<md-card  *ngFor="let loc of locations"  >
+   {{loc.location}}<br>
+  Number of slots: {{loc.slots}}
+  <!--<button md-raised-button >Delete</button>-->
+  <!--<button md-raised-button (click)='sendLoc(loc.location,loc.slots)'>View</button>-->
+  <button class="vbtn" md-raised-button (click)='toGetLocationBook(loc.location,loc.slots);toCheckTrue()' >View</button>
+  
+</md-card>
+<!--<table>
+  <tr *ngFor='let a of this.BS.bookParking'> {{a.Dates}}bb</tr>
+  
+</table>-->
+</div>
+
+<router-outlet ></router-outlet>

@@ -1,0 +1,21 @@
+<form class="example-form"  [formGroup]="signUpForm" (ngSubmit)="onSubmit(signUpForm.value)">
+  <md-card>
+       <md-card-title><h3>SignUp</h3></md-card-title>
+
+    <md-input-container  class="example-full-width" >
+      <input mdInput placeholder="First name" type="text" formControlName="name">
+    </md-input-container>
+    <br>
+    <md-input-container  class="example-full-width" > 
+      <input mdInput type="email" placeholder="Email" formControlName="email">
+    </md-input-container>
+    <br>
+     <md-input-container  class="example-full-width" >
+      <input mdInput type="password" placeholder="Password" formControlName="password">
+    </md-input-container>
+    <br>
+    <button class='btn' md-raised-button [disabled]='!signUpForm.valid'  routerLink=".">SignUp</button>
+  </md-card>
+
+  
+  </form>

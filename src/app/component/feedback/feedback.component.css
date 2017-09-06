@@ -1,0 +1,41 @@
+md-card{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+.User{
+    color: white;
+    font-weight: bold;
+    background-color: rgb(64,128,255);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+        padding-top: 10px;
+    padding-bottom: 10px;
+    /*float: right;*/
+    /*display:inline-block;*/
+    
+    
+    /*position:absolute;*/
+}
+.Admin{
+    color: black;
+    /*font-weight: bold;*/
+    width: auto;
+    background-color: rgb(241,240,240);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*display:inline-block;*/
+    
+    
+    
+    
+    /*float: left;*/
+}
+li{
+    list-style: none;
+}

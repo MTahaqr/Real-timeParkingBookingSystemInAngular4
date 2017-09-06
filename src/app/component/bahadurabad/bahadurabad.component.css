@@ -1,0 +1,21 @@
+.table1{
+    border: 4px solid black;
+    float: left;
+}
+td{
+    width: 300px;
+    height: 100px;
+}
+tr,td{
+    border: 5px double brown;
+    text-align: center;
+    font-size: 50px;
+    cursor: pointer;
+}
+.table2{
+    border: 4px solid black;
+    float: right;
+}
+.td1{
+    background-color: black;
+}

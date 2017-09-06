@@ -1,0 +1,85 @@
+<div class="main">
+<md-sidenav-container class="example-container">
+  <md-sidenav #sidenav class="example-sidenav">
+    <md-list>
+  <md-list-item routerLink='UserDashBoard' >Book Parking</md-list-item>
+  <md-list-item routerLink='ViewBooking' *ngIf=menuforUser> View Booking</md-list-item>
+  <!--<md-list-item routerLink='FeedBack' menuforUser>FeedBack</md-list-item>-->
+  <md-list-item routerLink='AddLocation' *ngIf=this.menuforAdmin>AddLocation</md-list-item>
+  <md-list-item routerLink='ViewAllBookings' *ngIf=this.menuforAdmin>ViewAllBookings</md-list-item>
+  <md-list-item routerLink='ViewAllUsers' *ngIf=this.menuforAdmin>ViewAllUsers</md-list-item>
+  <md-list-item routerLink='Feedback' *ngIf=menuforUser>FeedBack</md-list-item>
+  <md-list-item routerLink='ADFeedback' *ngIf=this.menuforAdmin>ADFeedback</md-list-item>
+  
+  
+
+</md-list>
+    <!--<ul *ngIf="(user | async)">
+    <li routerLink='UserDashBoard' *ngIf="(user | async)">
+      Book Parking
+    </li>
+    <li routerLink='ViewBooking'>
+      View Booking
+    </li>
+    <li routerLink='FeedBack'>
+      FeedBack
+    </li>
+  </ul>-->
+  </md-sidenav>
+
+  <div class="example-sidenav-content">
+   
+    <md-toolbar color="primary">
+       <md-icon *ngIf="(user | async)" (click)="sidenav.open()" (click)="menuForAccountType()">menu</md-icon>
+   
+  <span id="RTP">Real Time Parking Booking System</span>
+  
+   <!--<a class="a"  *ngIf="(user | async)" md-raised-button >Book Parking</a>
+
+  <a class="a"  *ngIf="(user | async)" md-raised-button >View Booking</a>
+    
+  <a class="a" *ngIf="(user | async)" md-raised-button >FeedBack</a>-->
+  <a class='btn2' *ngIf="(user | async)" (click)='logout()'  md-raised-button>Logout</a>
+  <span class='spanBtn'>
+  <a class='btn' *ngIf="!(user | async)" md-raised-button routerLink="SignUp">SignUp</a>
+  
+  <a class='btn' *ngIf="!(user | async)" md-raised-button routerLink="SignIn">SignIn</a>
+  
+  </span>  
+  
+</md-toolbar>
+
+  </div>
+<router-outlet></router-outlet>
+</md-sidenav-container>
+</div>
+<!--The content below is only a placeholder and can be replaced.-->
+<!--<md-toolbar color="primary">
+  <span>Real Time Parking Booking System</span>
+  <ul *ngIf="(user | async)">
+    <li routerLink='UserDashBoard' *ngIf="(user | async)">
+      Book Parking
+    </li>
+    <li routerLink='ViewBooking'>
+      View Booking
+    </li>
+    <li routerLink='FeedBack'>
+      FeedBack
+    </li>
+  </ul>
+   <a class="a"  *ngIf="(user | async)" md-raised-button >Book Parking</a>
+
+  <a class="a"  *ngIf="(user | async)" md-raised-button >View Booking</a>
+    
+  <a class="a" *ngIf="(user | async)" md-raised-button >FeedBack</a>-->
+  <!--<a class='btn2' *ngIf="(user | async)" (click)='logout()'  md-raised-button>Logout</a>
+  <span class='spanBtn'>
+  <a class='btn' *ngIf="!(user | async)" md-raised-button routerLink="SignUp">SignUp</a>
+  
+  <a class='btn' *ngIf="!(user | async)" md-raised-button routerLink="SignIn">SignIn</a>
+  
+  </span>  
+  
+</md-toolbar>
+<router-outlet></router-outlet>-->
+

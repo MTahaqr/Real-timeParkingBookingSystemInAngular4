@@ -1,0 +1,82 @@
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+.example-container {
+  width: 500px;
+  
+}
+
+.example-button-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+
+}
+.btn{
+    background-color: rgb(225,228,244);
+    float: right;
+    margin-left: 4px;
+    color: rgb(63,81,181);
+    font-weight: bold;
+    }
+.spanBtn{
+    margin-left: 820px;
+}
+.btn2{
+  /*float: right;*/
+  position: absolute;
+    background-color: rgb(225,228,244);
+  color: rgb(63,81,181);
+    font-weight: bold;
+  margin-left: 1230px;
+    
+ 
+}
+.a{
+  float: left;
+}
+li{
+  display: inline;
+  margin-left: 10px; 
+}
+ul{
+  margin-left: 450px;
+}
+
+.example-container {
+  width: 100%;
+  min-height: 648px;
+  /*border: 1px solid rgba(0, 0, 0, 0.5);*/
+}
+
+/*.example-sidenav-content {*/
+  /*display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;*/
+/*}*/
+#RTP{
+  margin-left: 5px;
+}
+
+.example-sidenav {
+  padding: 100px;
+}
+/*.btn2{
+  float: right;
+  margin-left: 890px;
+   color: purple;
+  margin-left: 20px;
+}*/
+/*.main{
+  background-color: gray;
+}*/
+/*.example-sidenav-content{
+  background-color: gray;
+  
+}*/

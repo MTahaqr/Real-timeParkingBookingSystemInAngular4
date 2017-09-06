@@ -1,0 +1,17 @@
+<md-card>
+
+<form  [formGroup]="locationForm" (ngSubmit)="onSubmit(locationForm.value)">
+  <table class="example-full-width" cellspacing="0"><tr>
+    <tr><td><md-input-container class="example-full-width">
+      <input mdInput placeholder="Add Location" formControlName="location"> 
+    </md-input-container></td>
+    <br>
+    </tr>
+    <tr>
+    <td><md-input-container class="example-full-width" >
+      <input mdInput placeholder="Slots" formControlName="slots">
+    </md-input-container></td>
+  </tr></table>
+    <button md-raised-button [disabled]='!locationForm.valid'>Add</button>
+</form>
+</md-card>

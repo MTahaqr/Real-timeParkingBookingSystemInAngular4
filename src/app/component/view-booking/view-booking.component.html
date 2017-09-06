@@ -1,0 +1,23 @@
+<h3>Bookings</h3>
+<md-card *ngFor='let booking of userBookingsArray ;let i=index'>
+  <!--<md-card-title>Bookings</md-card-title>-->
+  <md-card-subtitle></md-card-subtitle>
+  
+  <md-card-content><b>
+    Date: {{booking.Dates}}<br>
+    Time: {{booking.Time}}<br>
+    EndTime: {{booking.EndTime}}<br>
+    Hours: {{booking.Hours}}<br>
+    slotNum: {{booking.slotNum}}<br>
+    </b>
+    </md-card-content>
+      
+       
+   <!--<md-card-content>Time: {{booking.Time}}</md-card-content>
+    <md-card-content>EndTime: {{booking.EndTime}}</md-card-content>
+     <md-card-content>Hours: {{booking.Hours}}</md-card-content>
+      <md-card-content>slotNum: {{booking.slotNum}}</md-card-content>-->
+  <md-card-actions> 
+    <button md-raised-button (click)=' cancelBooking(i)'>Cancel</button>
+  </md-card-actions>
+</md-card>

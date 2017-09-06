@@ -1,0 +1,14 @@
+<md-card><h3>Users: </h3></md-card>
+
+<md-card *ngFor='let user of allUsersArray  ;let i=index'>
+  <!--<md-card-title>Bookings</md-card-title>-->
+  <md-card-subtitle></md-card-subtitle>
+  <md-card-content>
+    <b>Name:</b>{{user.name}}<br>
+    <b>Email:</b> {{user.email}}<br>
+    
+    </md-card-content>
+  <md-card-actions> 
+    <button md-raised-button (click)='removeUser(i)'  >Remove</button>
+  </md-card-actions>
+</md-card>

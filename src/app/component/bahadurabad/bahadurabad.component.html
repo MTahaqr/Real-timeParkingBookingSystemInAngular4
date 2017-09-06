@@ -1,0 +1,44 @@
+<form [formGroup]="bookTime" (ngSubmit)="onSubmit(bookTime.value) ;toGetDate()">  
+<md-input-container>
+  <input mdInput  [mdDatepicker]="picker" [(ngModel)]="date" placeholder="Choose a date" formControlName="Dates">
+  <button mdSuffix [mdDatepickerToggle]="picker"></button>
+</md-input-container>
+<md-datepicker #picker></md-datepicker>
+
+
+ <md-select placeholder="Select Time"  name="Time" formControlName="Time">
+    <md-option *ngFor="let T of Time" [value]="T">
+      {{T}}:00
+    </md-option>
+  </md-select>
+
+  <md-select placeholder="Select Hours" name="Hours" formControlName="Hours">
+    <md-option *ngFor="let H of Hours" [value]="H">
+      {{H}} hours
+    </md-option>
+  </md-select>
+ <div class="button-row">
+    <button md-raised-button [disabled]='!bookTime.valid' >Submit</button>
+  </div>
+  <!--<p> Selected value: {{selectedValue}} </p>-->
+
+
+  <table class="table1">
+    <tr ><td class="td1">Slot 1</td></tr>
+    <tr><td >Slot 2</td></tr>
+    <tr><td>Slot 3</td></tr>
+    <tr><td>Slot 4</td></tr>
+    
+  </table >
+   <table class="table2">
+    <tr><td>Slot 5</td></tr>
+    <tr><td>Slot 6</td></tr>
+    <tr><td>Slot 7</td></tr>
+    <tr><td>Slot 8</td></tr>
+    
+  </table>
+
+  
+
+  <!--<p> Selected value: {{selectedValue}} </p>-->
+</form>

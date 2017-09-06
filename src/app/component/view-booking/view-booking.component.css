@@ -1,0 +1,26 @@
+md-card{
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+h3{
+    /*margin-left: auto;
+    margin-right: auto;*/
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+button{
+     background-color: rgb(225,228,244);
+  color: rgb(63,81,181);
+    font-weight: bold;
+    /*float: right;*/
+}
+md-card-actions{
+    /*margin-left: 500px;*/
+    /*float: right;*/
+    /*position: absolute;*/
+    margin-left: 470px;
+    margin-block-end: 20px;
+}

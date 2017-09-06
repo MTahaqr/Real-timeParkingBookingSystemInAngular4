@@ -1,0 +1,22 @@
+<md-card>
+<ul>
+  <li *ngFor='let fb of feedbacksArray' [className]="fb.from">
+    {{fb.feedback}}
+  </li>
+</ul>
+<form  [formGroup]="feebackForm" (ngSubmit)="onSubmit(feebackForm.value)">
+  <table class="example-full-width" cellspacing="0"><tr>
+    <tr><td><md-input-container class="example-full-width">
+      <input mdInput placeholder="Your Feedback" formControlName="feedback"> 
+    </md-input-container></td>
+    <br>
+    </tr>
+    <!--<tr>
+    <td><md-input-container class="example-full-width" >
+      <input mdInput placeholder="Slots" formControlName="from">
+    </md-input-container></td>
+  </tr>-->
+  </table>
+    <button md-raised-button [disabled]='!feebackForm.valid'>Send</button>
+</form>
+</md-card>

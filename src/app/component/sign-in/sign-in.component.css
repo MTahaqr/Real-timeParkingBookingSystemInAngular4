@@ -1,0 +1,19 @@
+.example-form{
+    border: 1px solid white;
+    width: 400px;
+    text-align: center;
+    margin : auto;
+    margin-top: 70px;
+  min-height: 500px;
+    
+
+    /*margin-right: auto;     */
+}
+
+.example-full-width {
+  width: 100%;
+}
+.btn{
+    background-color: rgb(63,81,181);
+    color: white;
+}
